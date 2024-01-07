@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book List</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+  <link rel="stylesheet"  href="style.css">
+  <style>
+
+    .entree img {
+      max-width: 100px; 
+      margin-right: 10px; 
+    }
+    
+
+div {
+position: relative;
+left: 80px;
+display: block;
+}
+
+#entreeList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.entree-container {
+  flex: 0 0 48%; 
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  max-width: 40%;
+}
+
+@media (max-width: 600px) {
+  .entree-container {
+    flex: 0 0 100%; 
+  }
+}
+  </style>
+</head>
+<body>
+  <div id="entreeList"></div>
+
+  <script>
+    $(document).ready(function(){
+      $.getJSON('json2.json', function(data) {
+        let x = data.entree;
+        let str = "";
+
+        for (let i = 0; i < x.length; i++) {
+          str += '<div class="entree-container">';
+          str += "<b>" + data.entree[i].title;
+          str += "<b>" + data.entree[i].title + "</b><br>" + data.entree[i].description+ "<br>" + data.entree[i].price;
+          str += '</div>';
+          str += '</div>';
+        }
+
+        $("#entreeList").html(str);
+      });
+    });
+  </script>
+</body>
+</html>

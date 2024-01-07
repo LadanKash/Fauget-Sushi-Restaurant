@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet"/>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+   
+    <title>Customizable Sushi</title>
+
+  <script defer src="script2.js"></script>
+    <style>
+       body{
+        background: #333;
+        color: #fff;
+       }
+       p{
+        color: #fff;
+       }
+        .ingredient-category {
+            width: 33.33%;
+            float: left;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .ingredient-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .ingredient-btn {
+            display: inline-block;
+            margin: 5px;
+        }
+
+        .category-img {
+            width: 100px; 
+            height: auto; 
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .category-info {
+            display: inline-block;
+            vertical-align: middle;
+            text-align: left;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .ingredient-btn:hover {
+          background-color: var(--color-secondary-darker);
+        }
+
+
+    .ingredient-btn.selected {
+      background-color: red;
+      color: white;
+     }
+
+    </style>
+</head>
+<body>
+    <div>
+    <header class="header">
+  <nav class="nav">
+
+  <img src="img/logo.png" alt="Logo" class="nav__logo" id="logo"/>
+
+        <ul class="nav__links">
+          <li class="nav__item">
+            <a class="nav__link" href="index.html">Home</a>
+          </li>
+            <li class="nav__item dropdown">
+              <a class="nav__link" href="#">Experience Fauget &#9662;</a>
+              <div class="dropdown-content">
+                <a href="#">Fauget Style</a>
+                <a href="#">Testimonials</a>
+                <a href="gallery.html">Gallery</a>
+              </div>
+            <li class="nav__item dropdown">
+              <a class="nav__link" href="#header__title">Menu &#9662;</a>
+              <div class="dropdown-content">
+                <a href="http://localhost/entree.html">Entrées</a>
+                <a href="#">Soups & Salads</a>
+                <a href="http://localhost/sushi.html">Sushi</a>
+                <a href="#">Chef’s Creations</a>
+                <a href="#">À La Carte</a>
+                <a href="#">Lunch Menu</a>
+                <a href="#">Desserts</a>
+                <a href="#">Wine List & Drinks</a>
+                <a href="#">Take Out / Delivery</a>
+                <a href="customize.html">Discover Sushi</a>
+              </div>
+            </li>
+            
+            <li class="nav__item">
+              <a class="nav__link" href="gallery.html">Discover Sushi</a>
+            </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Take out/delivery</a>
+          </li>
+           
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="contact-us.html">Contact Us</a>
+          </li>
+          
+        </ul>
+      </nav>
+ <div class="hero-image">
+    <video autoplay muted loop id="video-background">
+      <source src="sushi_video.mp4" type="video/mp4">
+    </video>
+  </div>
+    <div class="hero-text">
+      <h1 class="big-heading" style="font-size: 48px;">Discover Our sushi to your taist</h1>
+      
+    </div>
+  </header>
+   
+
+<!--Customizable Sushi-->
+<section style="margin-top:100px; margin-bottom:30px;">
+  
+     <div class="features__feature" style="text-align: center; margin-left:250px; margin-bottom:70px;">
+          <h3 class="features__header">Customizable Sushi</h3>
+          <p style="margin-bottom: 30px;">
+         Choose your FAVORITE ingredients and find out all options you might have.
+          </p>
+        </div>
+
+    <div class="ingredient-category">
+        <img class="category-img" src="img/fishhh.png" alt="Fish & Meat">
+        <h2>Fish & Meat</h2>
+        <div class="ingredient-list">
+            <button class="ingredient-btn" value="tuna">Tuna</button>
+            <button class="ingredient-btn" value="salmon">Salmon</button>
+            <button class="ingredient-btn" value="mackerel">Mackerel</button>
+            <button class="ingredient-btn" value="tuna">White Snapper</button>
+            <button class="ingredient-btn" value="salmon">Yellow Tail</button>
+            <button class="ingredient-btn" value="mackerel">Chicken</button>
+        </div>
+    </div>
+    <div class="ingredient-category">
+        <img class="category-img" src="img/kreved.png" alt="Seafood">
+        <h2>Seafood</h2>
+        <div class="ingredient-list">
+            <button class="ingredient-btn" value="crab"> Crab</button>
+            <button class="ingredient-btn" value="lobster"> Lobster</button>
+            <button class="ingredient-btn" value="shrimp"> Shrimp</button>
+            <button class="ingredient-btn" value="eel"> Eel</button>
+            <button class="ingredient-btn" value="scallop"> Scallop</button>
+            <button class="ingredient-btn" value="octopus"> Octopus</button>
+            <button class="ingredient-btn" value="squid"> Squid</button>
+            <button class="ingredient-btn" value="sea-urchin"> Sea Urchin</button>
+            <button class="ingredient-btn" value="salmon-roe"> Salmon Roe</button>
+            <button class="ingredient-btn" value="fish-roe"> Fish Roe</button>
+            <button class="ingredient-btn" value="tobiko"> Tobiko</button>
+         
+        </div>
+    </div>
+   
+    <div class="ingredient-category">
+        <img class="category-img" src="img/sinin.png" alt="Vegetables">
+        <h2>Vegetables</h2>
+        <div class="ingredient-list">
+            <button class="ingredient-btn" value="avocado">avocado</button>
+            <button class="ingredient-btn" value="cucumber"> cucumber</button>
+            <button class="ingredient-btn" value="sweet potato">sweet potato</button>
+            <button class="ingredient-btn" value=" lettuce"> lettuce</button>
+            <button class="ingredient-btn" value="asparagus"> asparagus</button>
+            <button class="ingredient-btn" value="red pepper"> red pepper</button>
+            <button class="ingredient-btn" value="onion"> onion</button>
+            <button class="ingredient-btn" value="mushroom"> mushroom</button>
+            <button class="ingredient-btn" value="eggplant"> eggplant</button>
+            <button class="ingredient-btn" value="garlic"> garlic</button>
+           
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="ingredient-category">
+        <img class="category-img" src="img/fruitz.png" alt="">    
+     <h2>Fruits & Berries</h2>
+    <div class="ingredient-list">
+        <button class="ingredient-btn" value="mango">mango</button>
+        <button class="ingredient-btn" value="pineapple"> pineapple</button>
+        <button class="ingredient-btn" value="strawberries">strawberries</button>
+        <button class="ingredient-btn" value="blueberries">blueberries</button>
+    </div>
+   </div>
+    
+    <div class="ingredient-category">
+        <img class="category-img" src="img/hhhkhhlk.png" alt="">
+        <h2>Additions</h2>
+        <div class="ingredient-list">
+            <button class="ingredient-btn" value="teriyaki">teriyaki</button>
+            <button class="ingredient-btn" value="mayo">mayo</button>
+            <button class="ingredient-btn" value="tempura">tempura</button>
+            <button class="ingredient-btn" value="cream cheese">cream cheese</button>
+            <button class="ingredient-btn" value="ramen noodle">ramen noodle</button>
+            <button class="ingredient-btn" value="tofu"> tofu</button>
+            <button class="ingredient-btn" value="tamago">tamago</button>
+            <button class="ingredient-btn" value="sesame">sesame</button>
+            <button class="ingredient-btn" value="honey">honey</button>
+        </div>
+    </div>
+
+    <div class="ingredient-category">
+        <img class="category-img" src="img/wraps-sm.png" alt="">
+        <h2>Wraps</h2>
+        <div class="ingredient-list">
+           
+            <button class="ingredient-btn" value="seaweed">seaweed</button>
+            <button class="ingredient-btn" value="soya paper">soya paper</button>
+            <button class="ingredient-btn" value="tofu leaf">tofu leaf</button>
+            <button class="ingredient-btn" value="shiso leaf">shiso leaf</button>
+            <button class="ingredient-btn" value="rice">rice</button>
+            <button class="ingredient-btn" value="paper">paper</button>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="ingredient-category">
+    <img class="category-img" src="img/gluten.png" alt="">
+        <h2>Preferences</h2>
+        <div class="ingredient-list">
+            <button class="ingredient-btn" value=" Gluten Free"> Gluten Free</button>
+            <button class="ingredient-btn" value="All Cooked">All Cooked (No Raw)</button>
+            <button class="ingredient-btn" value="Vegetarian">Vegetarian</button>
+            <button class="ingredient-btn" value="Spicy">Spicy</button>
+
+        </div>
+    </div>
+  
+</section>
+
+<br><br>
+    <section class="section section--background" style="margin-top: 150px;">
+      <div class="section__title">
+       <h4 class="section__header" style="color:#fff">
+         Reserve </h4> <br><h1 style="color:#fff">A Table</h1>
+      </div><a href="reservation.html">
+      <button class="btn btn--show-modal" style="color:#fff">Reserve a table</button></a>
+    </section>
+
+     </div>
+<br>
+<footer>
+      <div class="footer-column">
+         <!-- Logo -->
+         <img src="img/logo.png" alt="Logo" class="nav__logo" id="logo" data-version-number="3.0">
+          <h3 style="margin-left: 50px;">Menu</h3>
+          <ul style="margin-left: 50px;">
+              <li>Take out/ Delivery</li>
+              <li>Reservation</li>
+              <li>Discover Sushi</li>
+              <li>Gift Cards</li>
+              <li>Testimonials</li>
+              <li>Gallery</li>
+              <li>Contact Us</li>
+          </ul>
+      </div>
+      <div class="footer-column">
+          <h3>Hours Of Operation</h3>
+          <table>
+              <tr><td>Mon</td><td>closed</td></tr>
+              <tr><td>Tue</td><td>11:30am – 2pm<br>4:30pm – 9:30pm</td></tr>
+              <tr><td>Wed</td><td>11:30am – 2pm<br>4:30pm – 9:30pm</td></tr>
+              <tr><td>Thu</td><td>11:30am – 2pm<br>4:30pm – 9:30pm</td></tr>
+              <tr><td>Fri</td><td>11:30am – 2pm<br>4:30pm – 10:30pm</td></tr>
+              <tr><td>Sat</td><td>3pm- 10:30pm</td></tr>
+              <tr><td>Sun</td><td>3pm – 9:30pm</td></tr>
+          </table>
+      </div>
+      <div class="footer-column">
+        <h3>Map</h3>
+        <div class="map-responsive">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103598.52272956069!2d-74.0321418141597!3d40.70531193291799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a2bc6c9b7c9%3A0xf7ef3bb1b815a59a!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2suk!4v1637238597799!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <br>
+       <p style="color: #fff; font-size: 14px;">119 Sullivan St,<br> New York, NY 10012,<br>United States</p>
+        <p style="color: #fff; font-size: 14px;">(123) 555-5555<br>info@fauget.ca</p>
+    </div>
+    <section class="section section--black">
+      <div class="section__title">
+     
+        <div class="social-icons">
+          <a href="https://www.facebook.com/yourpage" target="_blank" class="social-icon"><i class="fab fa-facebook-square"></i></a>
+          <a href="https://www.instagram.com/yourpage" target="_blank" class="social-icon"><i class="fab fa-instagram-square"></i></a>
+          <a href="https://www.google.com/" target="_blank" class="social-icon"><i class="fab fa-google"></i></a>
+        </div>
+      </div>
+    </section>
+  </footer>
+   <script>
+       $(document).ready(function() {
+         $('.ingredient-btn').on('click', function() {
+              $(this).toggleClass('selected'); 
+         });
+            
+     $('#findOptions').on('click', function() {
+             const selectedIngredients = $('.ingredient-btn.selected').map(function() {
+                return $(this).val();
+                  }).get();
+                           
+              });
+         });
+ </script>
+
+ </body>
+ </html>
+
+

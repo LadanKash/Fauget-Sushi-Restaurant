@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book List</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+  <link rel="stylesheet"  href="style.css">
+  <style>
+
+    .food img {
+      max-width: 100px; 
+      margin-right: 10px; 
+    }
+    
+img {
+
+position: absolute;
+top: 10px;
+left: 10px;
+display: block;
+width: 100%;
+max-width: 80px;
+}
+
+div {
+position: relative;
+left: 110px;
+display: block;
+}
+
+#foodList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.food-container {
+  flex: 0 0 48%; 
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+  max-width: 40%;
+}
+
+@media (max-width: 600px) {
+  .food-container {
+    flex: 0 0 100%; 
+  }
+}
+  </style>
+</head>
+<body>
+  <div id="foodList"></div>
+
+  <script>
+    $(document).ready(function(){
+      $.getJSON('json1.json', function(data) {
+        let x = data.food;
+        let str = "";
+
+        for (let i = 0; i < x.length; i++) {
+          str += '<div class="food-container">';
+          str += '<img src="' + data.food[i].photo + '" alt="' + data.food[i].title + '">';
+          str += '<div>';
+          str += "<b>" + data.food[i].title + "</b><br>" + data.food[i].author + "<br>" + data.food[i].price;
+          str += '</div>';
+          str += '</div>';
+        }
+
+        $("#foodList").html(str);
+      });
+    });
+  </script>
+</body>
+</html>
+

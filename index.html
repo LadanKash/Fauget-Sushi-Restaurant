@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    
+   <!-- <link rel="stylesheet" href="style.css" />-->
+    
+    <style></style>
+    <title>Resturent Sushi</title>
+
+    <script defer src="script2.js"></script>
+  </head>
+<body>
+
+   
+   
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    
+    <p style="text-align: center; font-size: 24px; margin-top: 20px;">Holiday Hours</p>
+  
+ <!-- Left Column -->
+      <div class="column modal-left-column">
+ <h2 style="margin-top: 20px; width: 24px;"></h2>
+
+<p>Sunday December 24</p>
+<p>(Takeaway and delivery only)</p>
+<p>Monday December 25</p>
+<p>Tuesday December 26</p> 
+<p>Wednesday December 27</p>
+<p>Thursday December 28</p>
+<p>Friday December 29</p>
+<p>Saturday December 30</p> 
+<p>sunday December 31</p>
+<p>Monday January 1</p>
+<p></p>
+<span class="close" style="margin-right: 25px; ">&times;</span>
+<br><br><br><br><br>
+</div>
+ <!-- Right Column -->
+<div class="modal-right-column" style=" margin-left: 40px;">
+<p>13h - 19h</p>
+<p></p>
+<br>
+<p>Closed</p>
+<p>Closed</p> 
+<p>16h30 - 22h</p>
+<p>16h30 - 22h</p>
+<p>16h30 - 22h30</p>
+<p>16h30 - 22h30</p> 
+<p>13h - 22h30</p>
+<p>Closed</p> 
+</div>
+</div>
+</div>
+</div>
+     
+    </div>
+
+    <br>
+     <header class="header"></header>
+    <main> </main>
+    <footer> </footer>
+   <script>
+    $("style").load("style.txt");
+    $("header").load("header.html"); 
+    $("main").load("main.html");   
+    $("footer").load("footer.html");
+
+     $(".close").on("click", function() {
+         Cookies.set('favoriteDish', 'sushi', { expires: 7, path: ' ' });
+        let favoriteDish = Cookies.get('favoriteDish');
+          alert('Favorite Dish: ' + favoriteDish);
+        });
+  </script>
+  
+<!--
+      <script type="text/javascript">
+
+        Cookies.set('favoriteDish', 'sushi', { expires: 7, path: ' ' });
+
+        let favoriteDish = Cookies.get('favoriteDish');
+
+        alert('Favorite Dish: ' + favoriteDish);
+
+    </script>-->
+
+  </body>
+</html>

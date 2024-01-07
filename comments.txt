@@ -1,0 +1,20 @@
+Name: William
+Email: will@gmail.ca
+Phone: 1234567890
+Comment: Done
+
+Name: Rose
+Email: rose@gmail.ca
+Phone: 1234567890
+Comment: Reserve
+
+Name: William
+Email: will@gmail.ca
+Phone: 1234567890
+Comment: Reserved
+
+Name: Lili
+Email: lili@gmail.ca
+Phone: 1234567890
+Comment: Reserve
+
